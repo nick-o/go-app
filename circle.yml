@@ -1,0 +1,3 @@
+test:
+  post:
+    - mv go-app ${CIRCLE_ARTIFACTS}/
