@@ -7,4 +7,4 @@ deployment:
     branch: master
     commands:
       - pip install awscli
-      - aws s3 cp ${CIRCLE_ARTIFACTS}/go-app s3://go-app-artifacts/go-app
+      - aws s3 cp ${CIRCLE_ARTIFACTS}/go-app s3://go-app-artifacts/go-app --acl 'public-read'
