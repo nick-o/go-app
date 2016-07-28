@@ -1,3 +1,10 @@
 test:
   post:
     - mv go-app ${CIRCLE_ARTIFACTS}/
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - pip install awscli
+      - aws s3 cp ${CIRCLE_ARTIFACTS}/go-app s3://go-app-artifacts/go-app
